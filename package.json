@@ -1,0 +1,24 @@
+{
+  "name": "@tencent/react-native-tcharts",
+  "version": "1.6.0",
+  "description": "基于ART的react native图表组件库",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://git.code.oa.com/wgweb/react-native-tcharts.git"
+  },
+  "keywords": [
+    "react",
+    "native",
+    "charts",
+    "pie",
+    "radar",
+    "path",
+    "line"
+  ],
+  "author": "lexiao jasonmiao sallyywang",
+  "license": "MIT"
+}
