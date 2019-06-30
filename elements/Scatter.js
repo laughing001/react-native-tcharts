@@ -1,9 +1,3 @@
-/*
- * @Author: jasonmiao 
- * @Date: 2019-04-24 15:55:03 
- * @Last Modified by: jasonmiao
- * @Last Modified time: 2019-04-26 15:19:50
- */
 import React, { Component } from "react"
 import {
     View,

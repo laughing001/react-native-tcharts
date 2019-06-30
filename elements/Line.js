@@ -1,9 +1,3 @@
-/*
- * @Author: jasonmiao 
- * @Date: 2019-04-09 16:45:09 
- * @Last Modified by: jasonmiao
- * @Last Modified time: 2019-04-24 15:32:25
- */
 import React, { Component } from "react"
 import {
     View,
@@ -214,7 +208,7 @@ export default class Line extends Component {
             {
                 showTips ? (<View style={[styles.button, { left: this.chartOffsetX + tipsLeft, bottom: this.surfaceHeight - tipsBottom }]}>
                     <View style={{
-                        width: 40, height: 20, backgroundColor: this.tipsBackgroundColor, justifyContent: 'center',
+                        width: 45, height: 20, backgroundColor: this.tipsBackgroundColor, justifyContent: 'center',
                         alignItems: 'center', borderRadius: 2
                     }}><Text style={{ color: this.tipsTextColor, fontSize: 12 }}>{tipsValue}</Text></View>
                     <View style={[styles.arrow, {borderTopColor:this.tipsBackgroundColor}]}></View></View>) : null

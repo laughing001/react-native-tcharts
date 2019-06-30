@@ -185,9 +185,6 @@ let option2 = {
 		}
 	}]
 };
-// let option1 = JSON.stringify(option);
-// option1 = JSON.parse(option1);
-// option1.shape = 'polygon';
 export default class RadarDemo extends Component{
 	constructor(props) {
 		super(props);
@@ -200,20 +197,11 @@ export default class RadarDemo extends Component{
 			option1: option1
 		};
 	}
-	onPress = () => {
-		// option.series[0]['data'] = [].concat([20, 30, 50, 10, 88, 95]);
-		// let option1 = JSON.stringify(option);
-		// option1 = JSON.parse(option1);
-		option.shape = 'polygon';
-		this.setState({
-			option: option
-		});
-	}
   	render() {
   		let {option, option1} = this.state;
 		return (<View style={{
             flex: 1,
-            backgroundColor: 'rgb(245, 252, 255)'
+            backgroundColor: 'rgba(255, 191, 203, 0.3)'
 		}}>
 			<ScrollView
                 contentContainerStyle={{

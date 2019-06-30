@@ -1,5 +1,4 @@
 /*
-* 测试art  Funnel(漏斗图)， sallyywang
 
 * @Params
 

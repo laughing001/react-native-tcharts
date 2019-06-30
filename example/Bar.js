@@ -186,7 +186,7 @@ export default class BarDemo extends Component {
     	return (<ScrollView
     		style={{
                 flex: 1,
-                backgroundColor: 'rgb(245, 252, 255)'
+                backgroundColor: 'rgba(153, 255, 204, 0.2)'
     		}}
     		contentContainerStyle={{
                 marginVertical: 30,

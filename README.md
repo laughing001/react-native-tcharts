@@ -8,13 +8,13 @@
 
 - [Rect]()
 
-- [Ellipse]()
-
 - [Polygon]()
 
 - [Circle]()
 
-- [Radar](https://git.code.oa.com/wgweb/react-native-tcharts/blob/master/doc/radar.md)
+- [Ellipse]()
+
+- [Radar]()
 
 - [Pie]()
 
@@ -27,8 +27,13 @@
 - [Funnel]()
 
 ## 图例
-![Rect](http://file.tapd.oa.com//tfl/pictures/201906/tapd_10019121_1561815606_61.png)![Polygon](http://file.tapd.oa.com//tfl/pictures/201906/tapd_10019121_1561815620_21.png)
-![Bar](http://file.tapd.oa.com//tfl/pictures/201906/tapd_10019121_1561103897_71.png)![Radar](http://file.tapd.oa.com/compress/compress_img/700?src=/tfl/pictures/201906/tapd_10019121_1561103890_43.jpg)
+![Rect](https://github.com/laughing001/react-native-tcharts/blob/master/screen_shot/Rect.png?raw=true)  ![Polygon](https://github.com/laughing001/react-native-tcharts/blob/master/screen_shot/Polygon.png?raw=true)  ![Circle](https://github.com/laughing001/react-native-tcharts/blob/master/screen_shot/Circle.png?raw=true)
+
+![Ellipse](https://github.com/laughing001/react-native-tcharts/blob/master/screen_shot/Ellipse.png?raw=true)  ![Radar](https://github.com/laughing001/react-native-tcharts/blob/master/screen_shot/Radar.png?raw=true)![Pie](https://github.com/laughing001/react-native-tcharts/blob/master/screen_shot/Pie.png?raw=true)
+
+![Bar](https://github.com/laughing001/react-native-tcharts/blob/master/screen_shot/Bar.png?raw=true)![Funnel](https://github.com/laughing001/react-native-tcharts/blob/master/screen_shot/Funnel.png?raw=true)
+
+![Line](https://github.com/laughing001/react-native-tcharts/blob/master/screen_shot/Line.png?raw=true)![Scatter](https://github.com/laughing001/react-native-tcharts/blob/master/screen_shot/Scatter.png?raw=true)
 
 ## 通用属性
 * *width* (number): 组件宽度,不传默认手机屏幕宽度.

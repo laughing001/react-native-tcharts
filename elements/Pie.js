@@ -1,5 +1,4 @@
 /*
-* 测试art 饼图 ， sallyywang
 
 * @Params
 
@@ -20,7 +19,6 @@
     }]
 }
 */
-
 import React, {Component} from 'react'
 import {
     View,
