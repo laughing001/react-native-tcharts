@@ -13,6 +13,7 @@ const defaultSeriesAreaStyle = {
 	opacity: 1
 };
 const defaultOption = {
+	r: 80,
 	splitNumber: 5,
 	shape: 'polygon',
 	startAngle: 0,
@@ -68,7 +69,7 @@ export default class Radar extends Component{
 			x: this.radarWidth / 2,
 			y: this.radarHeight / 2
 		};
-		this.radarR = Math.floor((this.option.radius / this.option.splitNumber) || ((this.radarHeight - 2) / this.option.splitNumber / 2));
+		this.radarR = Math.floor((this.option.r / this.option.splitNumber) || ((this.radarHeight - 2) / this.option.splitNumber / 2));
 		this._getShape();
 		this._getPath();
 		this.state = {
@@ -94,7 +95,7 @@ export default class Radar extends Component{
 			let start = {};
 			for(let j = 0, len = indicator.length; j < len; j++) {//轴线的循环
 				let c = this._calcuteCoordinate({
-					radius: r,
+					r: r,
 					degree: this._getDegreen(j) //相对圆心为原点的x坐标的角度,顺时针为正,逆时针为负
 				});
 				if(i === splitNumber) {//画雷达图轴线
@@ -140,7 +141,7 @@ export default class Radar extends Component{
 			let p = ART.Path();
 			item && item.data && item.data.map((v, index) => {
 				let c = this._calcuteCoordinate({
-					radius: v / this.indicator[index].max * (this.radarR * splitNumber),
+					r: v / this.indicator[index].max * (this.radarR * splitNumber),
 					degree: this._getDegreen(index)
 				});
 				if(0 == index) {
@@ -159,7 +160,7 @@ export default class Radar extends Component{
 	}
 	//计算点的坐标
 	_calcuteCoordinate = opt => {
-		let {radius, degree} = opt;
+		let {r, degree} = opt;
 		let x_flag = 1,
 			y_flag = 1;
 		if(degree < 0) {//负值换算成正值,且是小于360的
@@ -194,8 +195,8 @@ export default class Radar extends Component{
 			degree = 360 - degree;
 			textPosition = 'right_bottom';
 		}
-		let x = Math.abs(Math.round(radius * Math.cos(degree * Math.PI / 180))),
-			y = Math.abs(Math.round(radius * Math.sin(degree * Math.PI / 180)));
+		let x = Math.abs(Math.round(r * Math.cos(degree * Math.PI / 180))),
+			y = Math.abs(Math.round(r * Math.sin(degree * Math.PI / 180)));
 		return {
 			x: this.radarCenter.x + x * x_flag,
 			y: this.radarCenter.y + y * y_flag,

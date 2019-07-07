@@ -4,8 +4,6 @@ import Rect from '../elements/Rect';
 import Polygon from '../elements/Polygon';
 import {color} from '../theme/e_default';
 const option = {
-    x: 2,
-    y: 2,
     strokeWidth: 0,
     stroke: color[3],
     fill: color[0],

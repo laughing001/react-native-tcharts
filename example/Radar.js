@@ -4,7 +4,7 @@ import Radar from '../elements/Radar';
 let option = {
 	name: '',
 	legend: {},
-	radius: 80,
+	r: 80,
 	splitNumber: 4,
 	shape: 'circle', //传polygon为多边形,不传默认是polygon
 	startAngle: 120,
@@ -91,7 +91,7 @@ let option = {
 let option2 = {
 	name: '',
 	legend: {},
-	radius: 80,
+	r: 80,
 	splitNumber: 4,
 	shape: 'polygon', //传polygon为多边形,不传默认是polygon
 	startAngle: 90,
