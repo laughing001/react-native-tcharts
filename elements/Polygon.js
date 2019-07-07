@@ -2,14 +2,15 @@ import React, {Component} from 'react';
 import {View, ART, Dimensions} from 'react-native';
 const {width} = Dimensions.get('window');
 const {Surface, Shape} = ART;
+import {color} from '../theme/e_default';
 const defaultOption = {
 	lineNumber: 5,
 	startAngle: 0,
 	radius: 80,
 	opacity: 1,
-	fill: 'red',
+	fill: color[0],
 	strokeWidth: 2,
-	stroke: 'purple'
+	stroke: color[1]
 };
 export default class Polygon extends Component{
 	constructor(props) {

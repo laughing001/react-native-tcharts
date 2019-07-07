@@ -1,7 +1,7 @@
 import React, { Component} from "react";
 import { View, StyleSheet, ScrollView, Animated, Text, TouchableOpacity} from "react-native";
 import {color} from '../theme/e_default';
-import Line from './elements/Line';
+import Line from '../elements/Line';
 const option = {
     xAxis: {
         name: 'test',
@@ -91,7 +91,7 @@ export default class LineDemo extends Component{
         return(
             <View style={{
                 flex:1,
-                backgroundColor: 'rgba(153, 255, 204, 0.2)'
+                backgroundColor: 'rgb(245, 252, 255)'
             }}>
                 <ScrollView
                     contentContainerStyle={{

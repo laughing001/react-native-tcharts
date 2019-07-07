@@ -8,19 +8,20 @@ import {
 
 const { Surface, Shape, Path} = ART;
 const {width, height} = Dimensions.get('window');
+import {color} from '../theme/e_default';
 const defaultOption = {
     xAxis: {
         lineStyle: {
-            color: '#999'
+            color: color[0]
         },
         textStyle: {
-            color: '#999',
+            color: color[0],
             font: 10
         },
         gridLine: {
             isShow: true,
             lineStyle: {
-                color: '#f2f4f4'
+                color: color[1]
             }
         },
         min: 0,
@@ -30,16 +31,16 @@ const defaultOption = {
     },
     yAxis: {
         lineStyle: {
-            color: '#999'
+            color: color[2]
         },
         textStyle: {
-            color: '#999',
+            color: color[2],
             font: 10
         },
         gridLine: {
             isShow: true,
             lineStyle: {
-                color: '#f2f4f4'
+                color: color[3]
             }
         },
         min: 0,
@@ -63,7 +64,7 @@ const defaultOption = {
         ],
         radius: 4,
         itemStyle: {
-            color: '#2aaba4',
+            color: color[4],
             opacity: 1
         }
     }]

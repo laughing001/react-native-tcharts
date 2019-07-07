@@ -8,12 +8,12 @@ import {
 const {width, height} = Dimensions.get('window');
 
 const {Surface, Shape, Path, Group} = ART;
-import {color1, color2, color3, color4, color5} from '../Color';
+import {color} from '../theme/e_default';
 
 const defaultOption = {
     title: '漏斗图',
     legend: {},
-    color: [color1, color2, color3, color4, color5],
+    color: [color[0], color[1], color[2], color[3], color[4]],
     series: [{
         name: '漏斗图',
         type: 'funnel',

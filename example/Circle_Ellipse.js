@@ -1,7 +1,7 @@
 import React, { Component} from "react";
 import { View, StyleSheet, ScrollView, Animated, Text, TouchableOpacity} from "react-native";
-import Circle from './elements/Circle';
-import Ellipse from './elements/Ellipse';
+import Circle from '../elements/Circle';
+import Ellipse from '../elements/Ellipse';
 import {color} from '../theme/e_default';
 let option = {
     r: 80,
@@ -31,7 +31,7 @@ export default class CircleEllipseDemo extends Component{
         return(
             <View style={{
                 flex:1,
-                backgroundColor: 'rgba(153, 255, 204, 0.2)'
+                backgroundColor: 'rgb(245, 252, 255)'
             }}>
                 <ScrollView
                     contentContainerStyle={{

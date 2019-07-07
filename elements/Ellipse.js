@@ -2,14 +2,13 @@ import React, {Component} from 'react';
 import {View, ART, Dimensions} from 'react-native';
 const {width, height} = Dimensions.get('window');
 const {Surface, Shape, Path} = ART;
-import {color1, color2, color3, color4, color5} from '../Color';
-
+import {color} from '../theme/e_default';
 const defaultOption = {
     rx: 80,
     ry: 40,
-    fill: color1,
+    fill: color[0],
     strokeWidth: 2,
-    stroke: color2
+    stroke: color[1]
 };
 export default class Ellipse extends Component{
     constructor(props){

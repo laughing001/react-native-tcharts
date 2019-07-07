@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {ScrollView, View} from 'react-native';
-import Bar from './elements/Bar';
+import Bar from '../elements/Bar';
 import {color} from '../theme/e_default';
 export default class BarDemo extends Component {
   	render() {

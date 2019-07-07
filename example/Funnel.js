@@ -1,6 +1,6 @@
 import React, { Component, PureComponent } from "react";
 import { View, StyleSheet, ScrollView, Animated, Text, TouchableOpacity} from "react-native";
-import Funnel from './elements/Funnel';
+import Funnel from '../elements/Funnel';
 import {color} from '../theme/e_default';
 export default class FunnelDemo extends Component{
     constructor(props){
@@ -82,7 +82,7 @@ export default class FunnelDemo extends Component{
                 <ScrollView
                     style={{
                         flex: 1,
-                        backgroundColor: 'rgba(153, 255, 204, 0.2)'
+                        backgroundColor: 'rgb(245, 252, 255)'
                     }}
                     contentContainerStyle={{
                         marginVertical: 30,

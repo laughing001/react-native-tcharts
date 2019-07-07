@@ -10,30 +10,30 @@ import {
 
 const { Surface, Shape, Path, RadialGradient } = ART;
 const {width} = Dimensions.get('window');
-import {color1, color2, color3, color4, color5} from '../Color';
+import {color} from '../theme/e_default';
 const defaultOption = {
     xAxis: {
         name: 'test',
         nameStyle: {
-            color: color1,
+            color: color[0],
             fontSize: 12
         },
         lineStyle: {
-            color: color2
+            color: color[1]
         },
         textStyle: {
-            color: color2,
+            color: color[2],
             fontSize: 12
         },
         gridLine: {
             lineStyle: {
-                color: color3
+                color: color[3]
             }
         },
         axisTick: {
             show: true,
             lineStyle: {
-                color: color3
+                color: color[4]
             }
         },
         min: 0,
@@ -44,25 +44,25 @@ const defaultOption = {
     yAxis: {
         name: '',
         nameStyle: {
-            color: color1,
+            color: color[0],
             fontSize: 12
         },
         lineStyle: {
-            color: color3
+            color: color[1]
         },
         textStyle: {
-            color: color2,
+            color: color[2],
             fontSize: 12
         },
         gridLine: {
             lineStyle: {
-                color: color3
+                color: color[3]
             }
         },
         axisTick: {
             show: true,
             lineStyle: {
-                color: color3
+                color: color[4]
             }
         },
         interval: 200,
@@ -74,21 +74,21 @@ const defaultOption = {
         data: [7099, 6973, 6953, 6914, 7155, 7300, 6988, 7100, 7200, 7899],
         pointer: {
             itemStyle: {
-                color: color4,
+                color: color[6],
                 fill: '#fff'
             },
             radius: 3
         },
         tip: {
             itemStyle: {
-                backgroundColor: color2,
-                color: color3,
+                backgroundColor: color[7],
+                color: color[10],
                 fontSize: 12
             }
         },
         lineStyle: {
-            color: color5,
-            fill: color1
+            color: color[8],
+            fill: color[9]
         }
     }]
 }

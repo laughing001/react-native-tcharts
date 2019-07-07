@@ -9,14 +9,14 @@ import Funnel from './elements/Funnel';
 import Polygon from './elements/Polygon';
 import Bar from './elements/Bar';
 export {
-	Radar,
-	Pie,
-	Rect,
-	Circle,
-	Ellipse,
-	Line,
-	Scatter,
-	Funnel,
-	Polygon,
-	Bar
+    Radar,
+    Pie,
+    Rect,
+    Circle,
+    Ellipse,
+    Line,
+    Scatter,
+    Funnel,
+    Polygon,
+    Bar
 }

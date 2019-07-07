@@ -4,16 +4,14 @@ import {
     Text,
     StyleSheet,
     ART
-} from 'react-native'
-import {theme2} from '../theme/dark';
+} from 'react-native';
 
 const {Surface, Shape, Path, Group, Transform} = ART;
-import {color1, color2, color3, color4, color5} from '../Color';
-
+import {color} from '../theme/e_default';
 const defaultOption =  {
     title: {},
     legend: {},
-    color: [color1, color2, color3, color4, color5], //饼图颜色
+    color: [color[0], color[1], color[2], color[3], color[4]], //饼图颜色
     series:[{
         name: '',
         type: 'pie',
@@ -24,7 +22,7 @@ const defaultOption =  {
 export default class Pie extends Component{
     constructor(props){
         super(props);
-        this.defaultColor = theme2;
+        this.defaultColor = color;
         let option = Object.assign(defaultOption, props.option || {});
         let {color, series} = option;
         

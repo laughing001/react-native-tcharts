@@ -3,12 +3,13 @@ import {View, ART, Dimensions, ScrollView, Text} from 'react-native';
 const {width, height} = Dimensions.get('window');
 const {Surface, Shape} = ART;
 let indicatorCArr = [];
+import {color} from '../theme/e_default';
 const defaultSeriesLineStyle = {
-	color: '#30d9d0',
+	color: color[0],
 	opacity: 1
 };
 const defaultSeriesAreaStyle = {
-	color: '#30d9d0',
+	color: color[1],
 	opacity: 1
 };
 const defaultOption = {
@@ -18,29 +19,29 @@ const defaultOption = {
 	indicator: [{
 		text: '轴线1',
 		max: 100,
-		color: 'green'
+		color: color[2]
 	}, {
 		text: '轴线2',
 		max: 100,
-		color: 'green'
+		color: color[2]
 	}, {
 		text: '轴线3',
 		max: 100,
-		color: 'green'
+		color: color[2]
 	}, {
 		text: '轴线4',
 		max: 100,
-		color: 'green'
+		color: color[2]
 	}],
 	axisLine: {
 		show: true,
 		lineStyle: {
-			color: 'red'
+			color: color[3]
 		}
 	},
 	rich: {
 		default: {
-			color: '#000',
+			color: color[4],
 			fontSize: 12
 		}
 	},

@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {ScrollView, View, TouchableOpacity} from 'react-native';
-import Radar from './elements/Radar';
+import Radar from '../elements/Radar';
 let option = {
 	name: '',
 	legend: {},
@@ -213,7 +213,7 @@ export default class RadarDemo extends Component{
   		let {option, option1} = this.state;
 		return (<View style={{
             flex: 1,
-            backgroundColor: 'rgba(153, 255, 204, 0.2)'
+            backgroundColor: 'rgb(245, 252, 255)'
 		}}>
 			<ScrollView
                 contentContainerStyle={{

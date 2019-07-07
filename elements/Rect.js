@@ -4,13 +4,13 @@ import {
     ART
 } from 'react-native';
 const {Surface, Shape, Path} = ART;
-import {color1, color2, color3, color4, color5} from '../Color';
+import {color} from '../theme/e_default';
 const defaultOption = {
         x: 2,
         y: 2,
         strokeWidth: 1,
-        stroke: 'rgb(0, 0, 0)',
-        fill: color1,
+        stroke: color[1],
+        fill: color[0],
         width: 100,
         height: 100
 };

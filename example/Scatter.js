@@ -1,6 +1,6 @@
 import React, { Component} from "react";
 import { View, StyleSheet, ScrollView, Animated, Text, TouchableOpacity} from "react-native";
-import Scatter from './elements/Scatter';
+import Scatter from '../elements/Scatter';
 import {color} from '../theme/e_default';
 const option = {
     xAxis: {
