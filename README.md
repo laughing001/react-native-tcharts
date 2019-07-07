@@ -69,8 +69,8 @@ const option = {
 |strokeWidth|Number|No|边框宽度|
 |stroke|Color|No|边框颜色|
 |fill|Color|No|填充色|
-|lineNumber|Number|No|几边型|
-|startAngle|Number|No|起始角度，默认水平正向，正值为逆时针方向|
+|lineNumber|Number|No|多边形边的个数|
+|startAngle|Number|No|起始角度，默认x轴正向，正值为逆时针方向|
 - demo
 
 ```
