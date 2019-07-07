@@ -36,7 +36,7 @@ react-native-tcharts是基于react native ART的图表组件库，完全跨平�
 * *height* (number): 组件高度,不传默认200
 * *option* (object): 组件配置项,详情请点击各组件查看文档或直接查看example目录下对应的示例.
 
-##组件参数
+## 组件参数
 
 #### 1.Rect
 - option
