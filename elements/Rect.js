@@ -1,35 +1,28 @@
-/*
-
-* @Params
-
-* width: Number | 画布的宽度
-* height: Number | 画布的高度
-* option: Object | 绘图参数
-* option = {
-    x: Number ; //绘图起始X坐标
-    y: Number ;//绘图起始Y坐标
-    width: Number; //绘图宽度
-    height: Number; //绘图高度
-    fill: String; //填充颜色,
-    strokeWidth: Number; //绘图线条的宽度
-    stroke: String; //绘图颜色
-}
-*/
-
 import React, {Component} from 'react'
 import {
     View,
     ART
 } from 'react-native';
 const {Surface, Shape, Path} = ART;
+import {color1, color2, color3, color4, color5} from '../Color';
+const defaultOption = {
+        x: 2,
+        y: 2,
+        strokeWidth: 1,
+        stroke: 'rgb(0, 0, 0)',
+        fill: color1,
+        width: 100,
+        height: 100
+};
+
 export default class Rect extends Component{
     constructor(props){
         super(props);
-        
+        const option = Object.assign(defaultOption, props.option || {})
         this.state = {
             width: this.props.width || 100,
             height: this.props.height || 100,
-            option: this.props.option || {}
+            option: option
         }
     }
     componentWillMount(){

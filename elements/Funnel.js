@@ -1,62 +1,65 @@
-/*
-
-* @Params
-
-* width: Number | 画布的宽度
-* height: Number | 画布的高度
-* option: Object | 绘图参数
-* option = {
-    title: {},
-    legend: {},
-    color: [], //漏斗各段颜色
-    series:[{
-        name: '漏斗图',
-        type: 'funnel',
-        left: '10%', // 绘图距离左边的距离
-        top: 20,// 绘图距离顶部的距离
-        bottom: 20,
-        height: 30,// 图形高度
-        min: 0,
-        max: 100, //设置漏斗的最小和最大值
-        minSize: '10%', //漏斗的最小和最大尺寸
-        maxSize: '30%',
-        gap: 0, //漏斗间隔
-        funnelAlign: 'center | left | right', //对齐方式, 暂时只支持center
-        sort: 'ascending | descending' ;//漏斗顺序
-        label: {
-            show: true, //
-            fontSize: 12,
-            color: '#fff'//用来显示标注字体样式的
-        },
-        data: [{value: 20, name: '一季度'}]
-
-    }]
-}
-*/
-
 import React, {Component} from 'react'
 import {
     View,
     ScrollView,
+    Dimensions,
     ART
 } from 'react-native'
-
+const {width, height} = Dimensions.get('window');
 
 const {Surface, Shape, Path, Group} = ART;
+import {color1, color2, color3, color4, color5} from '../Color';
 
-
+const defaultOption = {
+    title: '漏斗图',
+    legend: {},
+    color: [color1, color2, color3, color4, color5],
+    series: [{
+        name: '漏斗图',
+        type: 'funnel',
+        min: 0,
+        max: 100, 
+        minSize: '0%', 
+        maxSize: '60%',
+        height: 100,
+        gap: 3, 
+        funnelAlign: 'center', 
+        sort: 'descending',
+        label: {
+            show: true, 
+            fontSize: 12,
+            color: '#fff'
+        },
+        data: [{
+            value: 20,
+            name: '一季度'
+        }, {
+            value: 40,
+            name: '一季度'
+        }, {
+            value: 60,
+            name: '二季度'
+        }, {
+            value: 80,
+            name: '三季度'
+        }]
+    }]
+};
 
 export default class Funnel extends Component{
     constructor(props){
         super(props);
         this.defaultColor = ['#f55353','#2aaba4'];
+        this.width = props.width || width;
+        
+        this.height = this.props.height || 100;
         //处理漏斗图中data排序
-        let option = Object.assign({}, props.option || {});
+        let option = Object.assign(defaultOption, props.option || {});
         let {color, series} = option;
-        option.series = this.preHandleSeries(series, props.width);
+        option.series = this.preHandleSeries(series, this.width);
         this.state = {
-            width: this.props.width || 100,
-            height: this.props.height || 100,
+            width: this.width,
+            height: this.height,
             color: color || this.defaultColor,
             option: this.props.option || {},
             multiPath: []
@@ -68,7 +71,7 @@ export default class Funnel extends Component{
             try{
                 newSeries = series.map((item, index)=>{
                 
-                    let {left, min, max, minSize, maxSize, sort, data, top, bottom, height} = item;
+                    let {min, max, minSize, maxSize, sort, data,  height} = item;
                 
                     if(data instanceof Array){
                         //data排序
@@ -89,13 +92,16 @@ export default class Funnel extends Component{
                         max = max || data[0].value;
                         min = (min || min == 0) ? min : data[data.length -1].value; 
                     }
+                    
                     item.minSize = (minSize.replace('%', '') / 100 * width) || 0;
                     item.maxSize = (maxSize.replace('%', '') / 100 * width) || 0;
-                    item.left = (left.replace('%', '') / 100 * width) || 0;
-                    item.top = top || 0;
-                    item.bottom = bottom || 0;
+                    //item.left = (left.replace('%', '') / 100 * width) || 0;
+                    item.intervalSize = (item.maxSize - item.minSize) / ( (max - min) || 1) ;
+                    item.left = (width - (data[0].value * item.intervalSize + item.minSize)) / 2 || 0;
+                    item.top = (this.height - height) /2 || 0;
+                    item.bottom = item.top || 0;
                     item.height = height || 0;
-                    item.intervalSize = (max - min) / ((item.maxSize - item.minSize) || 1) ;
+
                     return item;
                 }) 
             } catch(error){

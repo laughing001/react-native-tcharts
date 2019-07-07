@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {ScrollView, View, TouchableOpacity} from 'react-native';
-import Radar from '../elements/Radar';
+import Radar from './elements/Radar';
 let option = {
 	name: '',
 	legend: {},
@@ -37,27 +37,27 @@ let option = {
 	indicator: [{
 		max: 100,
 		min: 0,
-		text: '{a:25/}{b:27}\n{c:助攻}'
+		text: '{a:25}\n{c:助攻}'
 	}, {
 		max: 100,
 		min: 0,
-		text: '{a:53.7k/}{b:49.5k}\n{c:金钱}'
+		text: '{a:53.7k}\n{c:金钱}'
 	}, {
 		max: 100,
 		min: 0,
-		text: '{a:30/}{b:70}\n{c:视野}'
+		text: '{a:30}\n{c:视野}'
 	}, {
 		max: 100,
 		min: 0,
-		text: '{a:6/}{b:0}\n{c:推塔}'
+		text: '{a:6}\n{c:推塔}'
 	}, {
 		max: 100,
 		min: 0,
-		text: '{a:0/}{b:0}\n{c:大龙}'
+		text: '{a:0}\n{c:大龙}'
 	}, {
 		max: 100,
 		min: 0,
-		text: '{a:0/}{b:0}\n{c:小龙}'
+		text: '{a:0}\n{c:小龙}'
 	}],
 	axisLine: {//轴线 指示器线
 		show: true,
@@ -185,6 +185,9 @@ let option2 = {
 		}
 	}]
 };
+// let option1 = JSON.stringify(option);
+// option1 = JSON.parse(option1);
+// option1.shape = 'polygon';
 export default class RadarDemo extends Component{
 	constructor(props) {
 		super(props);
@@ -197,11 +200,20 @@ export default class RadarDemo extends Component{
 			option1: option1
 		};
 	}
+	onPress = () => {
+		// option.series[0]['data'] = [].concat([20, 30, 50, 10, 88, 95]);
+		// let option1 = JSON.stringify(option);
+		// option1 = JSON.parse(option1);
+		option.shape = 'polygon';
+		this.setState({
+			option: option
+		});
+	}
   	render() {
   		let {option, option1} = this.state;
 		return (<View style={{
             flex: 1,
-            backgroundColor: 'rgba(255, 191, 203, 0.3)'
+            backgroundColor: 'rgba(153, 255, 204, 0.2)'
 		}}>
 			<ScrollView
                 contentContainerStyle={{

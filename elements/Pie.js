@@ -1,24 +1,3 @@
-/*
-
-* @Params
-
-* width: Number | 画布的宽度
-* height: Number | 画布的高度
-* option: Object | 绘图参数
-* option = {
-    title: {},
-    legend: {},
-    color: [], //饼图颜色
-    series:[{
-        name: '',
-        TextStyle: {}, //字体样式
-        type: 'pie',
-        radius: [Number,Number], //饼图半径暂支持数字
-        data: [Number], //饼图占用数据
-        //仅支持绘制一个
-    }]
-}
-*/
 import React, {Component} from 'react'
 import {
     View,
@@ -26,16 +5,27 @@ import {
     StyleSheet,
     ART
 } from 'react-native'
-import {theme2} from '../theme/theme2';
+import {theme2} from '../theme/dark';
 
 const {Surface, Shape, Path, Group, Transform} = ART;
+import {color1, color2, color3, color4, color5} from '../Color';
 
-
+const defaultOption =  {
+    title: {},
+    legend: {},
+    color: [color1, color2, color3, color4, color5], //饼图颜色
+    series:[{
+        name: '',
+        type: 'pie',
+        radius: [40,80], //饼图半径暂支持数字
+        data: [10,20], //饼图占用数据
+    }]
+}
 export default class Pie extends Component{
     constructor(props){
         super(props);
         this.defaultColor = theme2;
-        let option = props.option || {};
+        let option = Object.assign(defaultOption, props.option || {});
         let {color, series} = option;
         
         //对series做处理，支持多个元素，以及data为对象

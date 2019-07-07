@@ -1,25 +1,26 @@
 import React, { Component} from "react";
 import { View, StyleSheet, ScrollView, Animated, Text, TouchableOpacity} from "react-native";
-import Circle from '../elements/Circle';
-import Ellipse from '../elements/Ellipse';
+import Circle from './elements/Circle';
+import Ellipse from './elements/Ellipse';
+import {color} from '../theme/e_default';
 let option = {
     r: 80,
-    fill: '#FF99CC',
-    strokeWidth: 2,
+    fill: color[3],
+    strokeWidth: 0,
     stroke: '#66CCFF'
 }
 let option1 = {
     rx: 80,
     ry: 40,
-    fill: '#FFFF66',
-    strokeWidth: 2,
+    fill: color[4],
+    strokeWidth: 0,
     stroke: '#66CCFF'
 }
 let option2 = {
     rx: 40,
     ry: 80,
-    fill: '#CC99FF',
-    strokeWidth: 2,
+    fill: color[5],
+    strokeWidth: 0,
     stroke: '#66CCFF'
 }
 export default class CircleEllipseDemo extends Component{
@@ -30,7 +31,7 @@ export default class CircleEllipseDemo extends Component{
         return(
             <View style={{
                 flex:1,
-                backgroundColor: 'rgba(255, 255, 204, 0.5)'
+                backgroundColor: 'rgba(153, 255, 204, 0.2)'
             }}>
                 <ScrollView
                     contentContainerStyle={{

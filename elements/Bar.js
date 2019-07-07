@@ -56,8 +56,7 @@ const defaultOption = {
 export default class Bar extends Component{
 	constructor(props) {
 		super(props);
-		this.option = {};
-		Object.assign(this.option, defaultOption, props && props.option);
+		this.option = Object.assign(defaultOption, props.option || {});
 		const xAxis = this.option.xAxis,
 			yAxis = this.option.yAxis;
 		this.width = props.width || width;

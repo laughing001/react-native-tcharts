@@ -1,5 +1,9 @@
 # react-native-tcharts
 
+## 安装
+
+`$ tnpm install @tencent/react-native-tcharts --save`
+
 ## 组件列表
 
 - [Rect]()

@@ -2,18 +2,19 @@ import React, {Component} from 'react';
 import {View, ART, Dimensions} from 'react-native';
 const {width, height} = Dimensions.get('window');
 const {Surface, Shape, Path} = ART;
+import {color1, color2, color3, color4, color5} from '../Color';
+
 const defaultOption = {
     rx: 80,
     ry: 40,
-    fill: '#CCFF33',
+    fill: color1,
     strokeWidth: 2,
-    stroke: '#FF0099'
+    stroke: color2
 };
 export default class Ellipse extends Component{
     constructor(props){
         super(props);
-        this.option = {};
-        Object.assign(this.option, defaultOption, props.option);
+        this.option = Object.assign(defaultOption, props.option || {});
         this.width = props.width || width;
         this.height = props.height || 100;
         this.path = this.getPath();

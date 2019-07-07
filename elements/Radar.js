@@ -55,8 +55,7 @@ export default class Radar extends Component{
 	constructor(props) {
 		super(props);
 		indicatorCArr = [];
-		this.option = {};
-		Object.assign(this.option, defaultOption, props && props.option);
+		this.option = Object.assign(defaultOption, props.option || {});
 		this.splitNumber = this.option.splitNumber || 5;//雷达图有几个圆圈
 		this.indicator = this.option.indicator || [];//逆时针排列
 		this.shape = this.option.shape || 'polygon';

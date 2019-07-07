@@ -1,6 +1,6 @@
 {
   "name": "@tencent/react-native-tcharts",
-  "version": "1.6.0",
+  "version": "1.7.0",
   "description": "基于ART的react native图表组件库",
   "main": "index.js",
   "scripts": {

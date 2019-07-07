@@ -1,13 +1,14 @@
 import React, { Component} from "react";
 import { View, StyleSheet, ScrollView, Animated, Text, TouchableOpacity} from "react-native";
-import Rect from '../elements/Rect';
-import Polygon from '../elements/Polygon';
+import Rect from './elements/Rect';
+import Polygon from './elements/Polygon';
+import {color} from '../theme/e_default';
 const option = {
     x: 2,
     y: 2,
-    strokeWidth: 2,
-    stroke: '#FF9900',
-    fill: '#CCFF99',
+    strokeWidth: 0,
+    stroke: color[3],
+    fill: color[0],
     width: 160,
     height: 100
 };
@@ -16,18 +17,18 @@ const option1 = {
     startAngle: 0,
     lineNumber: 6,
     opacity: 1,
-    fill: '#66FFCC',
-    strokeWidth: 2,
-    stroke: '#FF0099'
+    fill: color[1],
+    strokeWidth: 0,
+    stroke: color[4]
 };
 const option2 = {
     radius: 80,
     startAngle: 90,
     lineNumber: 7,
     opacity: 1,
-    fill: 'CCFF99',
-    strokeWidth: 2,
-    stroke: '#FFCC00'
+    fill: color[2],
+    strokeWidth: 0,
+    stroke: color[5]
 };
 export default class RectPolygonDemo extends Component{
     constructor(props){

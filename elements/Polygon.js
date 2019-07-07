@@ -14,8 +14,7 @@ const defaultOption = {
 export default class Polygon extends Component{
 	constructor(props) {
 		super(props);
-		this.option = {};
-		Object.assign(this.option, defaultOption, props && props.option);
+		this.option = Object.assign(defaultOption, props.option || {});
 		this.path = ART.Path();
 		this.startAngle = this.option.startAngle || 0;//坐标系起始角度，也就是第一个指示器轴的角度,默认x轴正向
 		this.splitDegree = 360 / this.option.lineNumber;
