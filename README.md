@@ -31,7 +31,7 @@ react-native-tcharts是基于react native ART的图表组件库，完全跨平�
 ![](https://raw.githubusercontent.com/laughing001/react-native-tcharts/master/screen_shot/total.jpg)
 
 ## 通用属性
-* style*(object):同react native 组件style，会直接透传到组件容器元素上.
+* *style*(object):同react native 组件style，会直接透传到组件容器元素上.
 * *width* (number): 组件宽度,不传默认手机屏幕宽度.
 * *height* (number): 组件高度,不传默认200
 * *option* (object): 组件配置项,详情请点击各组件查看文档或直接查看example目录下对应的示例.
