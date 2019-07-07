@@ -7,25 +7,25 @@ react-native-tcharts是基于react native ART的图表组件库，完全跨平�
 
 ## 组件列表
 
-- [Rect]()
+- Rect
 
-- [Polygon]()
+- Polygon
 
-- [Circle]()
+- Circle
 
-- [Ellipse]()
+- Ellipse
 
-- [Radar]()
+- Radar
 
-- [Pie]()
+- Pie
 
-- [Line]()
+- Line
 
-- [Bar]()
+- Bar
 
-- [Scatter]()
+- Scatter
 
-- [Funnel]()
+- Funnel
 
 ## 图例
 ![](https://raw.githubusercontent.com/laughing001/react-native-tcharts/master/screen_shot/total.jpg)
@@ -36,7 +36,7 @@ react-native-tcharts是基于react native ART的图表组件库，完全跨平�
 * *height* (number): 组件高度,不传默认200
 * *option* (object): 组件配置项,详情请点击各组件查看文档或直接查看example目录下对应的示例.
 
-## 组件option参数
+##组件参数
 
 #### 1.Rect
 - option
