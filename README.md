@@ -2,7 +2,7 @@
 
 ## 安装
 
-`$ tnpm install @tencent/react-native-tcharts --save`
+`$ npm install react-native-tcharts --save`
 
 ## 组件列表
 
@@ -27,11 +27,7 @@
 - [Funnel]()
 
 ## 图例
-![Rect](https://github.com/laughing001/react-native-tcharts/blob/master/screen_shot/Rect_Polygon.png?raw=true)&nbsp;&nbsp;![Polygon](https://github.com/laughing001/react-native-tcharts/blob/master/screen_shot/Circle_Ellipse.png?raw=true)&nbsp;&nbsp;![Circle](https://github.com/laughing001/react-native-tcharts/blob/master/screen_shot/Scatter.png?raw=true)
-
-![Ellipse](https://github.com/laughing001/react-native-tcharts/blob/master/screen_shot/Pie.png?raw=true)&nbsp;&nbsp;![Radar](https://github.com/laughing001/react-native-tcharts/blob/master/screen_shot/Radar.png?raw=true)&nbsp;&nbsp;![Pie](https://github.com/laughing001/react-native-tcharts/blob/master/screen_shot/Bar.png?raw=true)
-
-![Funnel](https://github.com/laughing001/react-native-tcharts/blob/master/screen_shot/Funnel.png?raw=true)&nbsp;&nbsp;&nbsp;&nbsp;![Line](https://github.com/laughing001/react-native-tcharts/blob/master/screen_shot/Line.png?raw=true)
+![](https://github.com/laughing001/react-native-tcharts/blob/master/screen_shot/total.jpg?raw=true)
 
 ## 通用属性
 * *width* (number): 组件宽度,不传默认手机屏幕宽度.

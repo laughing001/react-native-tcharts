@@ -1,5 +1,5 @@
 {
-  "name": "@tencent/react-native-tcharts",
+  "name": "react-native-tcharts",
   "version": "1.7.0",
   "description": "基于ART的react native图表组件库",
   "main": "index.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "http://git.code.oa.com/wgweb/react-native-tcharts.git"
+    "url": "https://github.com/laughing001/react-native-tcharts.git"
   },
   "keywords": [
     "react",
