@@ -1,9 +1,9 @@
 <p align="center">
     <a href="https://github.com/laughing001/react-native-tcharts" target="_blank">
-        <img src="https://github.com/laughing001/react-native-tcharts/blob/master/logo.png" alt="Orange-ci logo">
+        <img src="https://github.com/laughing001/react-native-tcharts/blob/master/logo.png" alt="react-native-tcharts logo">
     </a>
 </p>
-# react-native-tcharts
+
 ## 简介
 react-native-tcharts是基于react native ART的图表组件库，完全跨平台，无依赖
 
