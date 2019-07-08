@@ -30,23 +30,23 @@ react-native-tcharts是基于react native ART的图表组件库，完全跨平�
 
 ## 使用
 ```
-    import {Rect, Polygon, Circle, Ellipse, Radar, Pie, Line, Bar, Scatter, Funnel} from 'react-native-tcharts'
-    Class Demo extends Component{
-        render{
-            return (<View>
-                <Rect style={} width={} height={} option={} />
-                <Polygon style={} width={} height={} option={} />
-                <Circle style={} width={} height={} option={} />
-                <Ellipse style={} width={} height={} option={} />
-                <Radar style={} width={} height={} option={} />
-                <Pie style={} width={} height={} option={} />
-                <Line style={} width={} height={} option={} />
-                <Bar style={} width={} height={} option={} />
-                <Scatter style={} width={} height={} option={} />
-                <Funnel style={} width={} height={} option={} />
-            </View>)
-        }
+import {Rect, Polygon, Circle, Ellipse, Radar, Pie, Line, Bar, Scatter, Funnel} from 'react-native-tcharts'
+Class Demo extends Component{
+    render{
+        return (<View>
+            <Rect style={} width={} height={} option={} />
+            <Polygon style={} width={} height={} option={} />
+            <Circle style={} width={} height={} option={} />
+            <Ellipse style={} width={} height={} option={} />
+            <Radar style={} width={} height={} option={} />
+            <Pie style={} width={} height={} option={} />
+            <Line style={} width={} height={} option={} />
+            <Bar style={} width={} height={} option={} />
+            <Scatter style={} width={} height={} option={} />
+            <Funnel style={} width={} height={} option={} />
+        </View>)
     }
+}
 ```
 
 ## 图例
