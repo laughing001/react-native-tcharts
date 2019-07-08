@@ -1,6 +1,6 @@
 <p align="center">
     <a href="https://github.com/laughing001/react-native-tcharts" target="_blank">
-        <img src="https://github.com/laughing001/react-native-tcharts/blob/master/logo.png" alt="react-native-tcharts logo">
+        <img src="https://raw.githubusercontent.com/laughing001/react-native-tcharts/master/logo.png" alt="react-native-tcharts logo">
     </a>
 </p>
 
