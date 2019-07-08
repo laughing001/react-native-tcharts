@@ -1,9 +1,6 @@
 # react-native-tcharts
 ## 简介
 react-native-tcharts是基于react native ART的图表组件库，完全跨平台，无依赖
-## 安装
-
-`$ npm install react-native-tcharts --save`
 
 ## 组件列表
 
@@ -26,6 +23,31 @@ react-native-tcharts是基于react native ART的图表组件库，完全跨平�
 - Scatter
 
 - Funnel
+
+## 安装
+
+`$ npm install react-native-tcharts --save`
+
+## 使用
+```
+    import {Rect, Polygon, Circle, Ellipse, Radar, Pie, Line, Bar, Scatter, Funnel} from 'react-native-tcharts'
+    Class Demo extends Component{
+        render{
+            return (<View>
+                <Rect style={} width={} height={} option={} />
+                <Polygon style={} width={} height={} option={} />
+                <Circle style={} width={} height={} option={} />
+                <Ellipse style={} width={} height={} option={} />
+                <Radar style={} width={} height={} option={} />
+                <Pie style={} width={} height={} option={} />
+                <Line style={} width={} height={} option={} />
+                <Bar style={} width={} height={} option={} />
+                <Scatter style={} width={} height={} option={} />
+                <Funnel style={} width={} height={} option={} />
+            </View>)
+        }
+    }
+```
 
 ## 图例
 ![](https://raw.githubusercontent.com/laughing001/react-native-tcharts/master/screen_shot/total.jpg)
