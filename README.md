@@ -9,25 +9,25 @@ react-native-tcharts是基于[react native ART](https://github.com/wangmerry/rea
 
 ## 组件列表
 
-- [Rect](#1.Rect)
+- [Rect](#1Rect)
 
-- [Polygon](#2.Polygon)
+- [Polygon](#2Polygon)
 
-- [Circle](#3.Circle&Ellipse)
+- [Circle](#3Circle&Ellipse)
 
-- [Ellipse](#3.Circle&Ellipse)
+- [Ellipse](#3Circle&Ellipse)
 
-- [Radar](#4.Radar)
+- [Radar](#4Radar)
 
-- [Pie](#5.Pie)
+- [Pie](#5Pie)
 
-- [Line](#6.Line)
+- [Line](#6Line)
 
-- [Bar](#7.Bar)
+- [Bar](#7Bar)
 
-- [Scatter](#8.Scatter)
+- [Scatter](#8Scatter)
 
-- [Funnel](#9.Funnel)
+- [Funnel](#9Funnel)
 
 ## 安装
 
