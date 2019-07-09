@@ -13,21 +13,21 @@ react-native-tcharts是基于[react native ART](https://github.com/wangmerry/rea
 
 - [Polygon](#2Polygon)
 
-- [Circle](#3Circle&Ellipse)
+- [Circle](#3Circle)
 
-- [Ellipse](#3Circle&Ellipse)
+- [Ellipse](#4Ellipse)
 
-- [Radar](#4Radar)
+- [Radar](#5Radar)
 
-- [Pie](#5Pie)
+- [Pie](#6Pie)
 
-- [Line](#6Line)
+- [Line](#7Line)
 
-- [Bar](#7Bar)
+- [Bar](#8Bar)
 
-- [Scatter](#8Scatter)
+- [Scatter](#9Scatter)
 
-- [Funnel](#9Funnel)
+- [Funnel](#10Funnel)
 
 ## 安装
 
@@ -111,7 +111,7 @@ const option = {
 };
 ```
 
-#### 3.Circle&Ellipse
+#### 3.Circle
 - option
 
 
@@ -120,18 +120,32 @@ const option = {
 |strokeWidth|Number|No|边框宽度|
 |stroke|Color|No|边框颜色|
 |fill|Color|No|填充色|
-|r|Number|No|半径(Circle独有)|
-|rx|Number|No|短边半径(Ellipse独有)|
-|ry|Number|No|长边半径(Ellipse独有)|
+|r|Number|No|半径|
 - demo
 ```
-const circle_option = {
+const option = {
     r: 80,
     fill: '#fff',
     strokeWidth: 2,
     stroke: '#000'
 }
-const ellipse_option = {
+
+```
+
+#### 4.Ellipse
+- option
+
+
+|Props|Type|Required|Description|
+| :- | :- | :- | :- |
+|strokeWidth|Number|No|边框宽度|
+|stroke|Color|No|边框颜色|
+|fill|Color|No|填充色|
+|rx|Number|No|短边半径|
+|ry|Number|No|长边半径|
+- demo
+```
+const option = {
     rx: 40,
     ry: 80,
     fill: '#fff',
@@ -139,7 +153,7 @@ const ellipse_option = {
     stroke: '#000'
 }
 ```
-#### 4.Radar
+#### 5.Radar
 - option
 
 
@@ -227,7 +241,7 @@ const option = {
 	}]
 }
 ```
-#### 5.Pie
+#### 6.Pie
 - option
 
 
@@ -254,7 +268,7 @@ const option2 = {
     }]
 }
 ```
-#### 6.Line
+#### 7.Line
 - option
 
 
@@ -347,7 +361,7 @@ const option = {
     }]
 }
 ```
-#### 7.Bar
+#### 8.Bar
 - option
 
 
@@ -417,7 +431,7 @@ const option = {
     }]
 };
 ```
-#### 8.Scatter
+#### 9.Scatter
 - option
 
 
@@ -489,7 +503,7 @@ const option = {
     }]
 };
 ```
-#### 9.Funnel
+#### 10.Funnel
 - option
 
 
