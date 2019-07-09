@@ -147,7 +147,7 @@ const ellipse_option = {
 |-----|-----|-----|-----|
 |r|Number|No|雷达图半径|
 |splitNumber|Number|No|雷达图轴线数量|
-|shape|String|No|雷达图形状[polygon|circle],默认polygon|
+|shape|String|No|雷达图形状[polygon/circle],默认polygon|
 |startAngle|Number|No|雷达图起始角度,默认x轴正向,正值为逆时针旋转|
 |indicator|Array|No|轴线文案,最大值,文案颜色,数组长度即为轴线数量|
 |axisLine|Object|No|轴线配置,是否显示以及轴线样式|
