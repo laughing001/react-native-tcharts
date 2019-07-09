@@ -5,7 +5,7 @@
 </p>
 
 ## 简介
-react-native-tcharts是基于react native ART的图表组件库，完全跨平台，无依赖
+react-native-tcharts是基于[react native ART](https://github.com/wangmerry/react-native-ART)的图表组件库，完全跨平台，无依赖
 
 ## 组件列表
 
