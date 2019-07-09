@@ -69,7 +69,7 @@ Class Demo extends Component{
 - option
 
 | Props |   Type  | Required | Description |
-|-|-|-|-|
+|:-:|-|-|-|
 | width |  Number |    No    |正方形/长方形宽度|
 | height |  Number |    No    |正方形/长方形高度|
 | strokeWidth|  Number |    No    |边框宽度|
