@@ -157,13 +157,13 @@ const ellipse_option = {
 ```
 const option = {
     r: 80,
-	splitNumber: 5,
+    splitNumber: 5,
 	shape: 'polygon',
 	startAngle: 0,
 	indicator: [{
 		text: '{a:v1}{b:v2}{c:v3}',
 		max: 100,
-        min: 0,
+        	min: 0,
 		color: '#000'
 	}, {
 		text: '{a:v1}{b:v2}{c:v3}',
@@ -355,7 +355,7 @@ const option = {
 |-----|-----|-----|-----|
 |xAxis|Object|No|x轴信息|
 |yAxis|Object|No|y轴信息|
-|series|Array|No|折线图数据|
+|series|Array|No|柱状图数据|
 - demo
 ```
 const option = {
@@ -425,7 +425,7 @@ const option = {
 |-----|-----|-----|-----|
 |xAxis|Object|No|x轴信息|
 |yAxis|Object|No|y轴信息|
-|series|Array|No|折线图数据|
+|series|Array|No|散点图数据|
 - demo
 ```
 const option = {
