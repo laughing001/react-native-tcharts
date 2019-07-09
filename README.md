@@ -231,10 +231,10 @@ const option = {
 - option
 
 
-|Props|Type|Required|Description|
-|-|-|-|-|
-|color|Array|No|饼图颜色|
-|series|Array|No|饼图数据|
+Props|Type|Required|Description
+-|-|-|-
+color|Array|No|饼图颜色
+series|Array|No|饼图数据
 - demo
 ```
 const option2 = {
