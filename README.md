@@ -9,25 +9,25 @@ react-native-tcharts是基于[react native ART](https://github.com/wangmerry/rea
 
 ## 组件列表
 
-- Rect
+- [Rect](#1.Rect)
 
-- Polygon
+- [Polygon](#2.Polygon)
 
-- Circle
+- [Circle](#3.Circle&Ellipse)
 
-- Ellipse
+- [Ellipse](#3.Circle&Ellipse)
 
-- Radar
+- [Radar](#4.Radar)
 
-- Pie
+- [Pie](#5.Pie)
 
-- Line
+- [Line](#6.Line)
 
-- Bar
+- [Bar](#7.Bar)
 
-- Scatter
+- [Scatter](#8.Scatter)
 
-- Funnel
+- [Funnel](#9.Funnel)
 
 ## 安装
 
@@ -69,7 +69,7 @@ Class Demo extends Component{
 - option
 
 | Props |   Type  | Required | Description |
-|:-:|:-:|:-:|:-:|
+| :- | :- | :- | :- |
 | width |  Number |    No    |正方形/长方形宽度|
 | height |  Number |    No    |正方形/长方形高度|
 | strokeWidth|  Number |    No    |边框宽度|
@@ -90,7 +90,7 @@ const option = {
 - option
 
 |Props|Type|Required|Description|
-|:-:|:-:|:-:|:-:|
+| :- | :- | :- | :- |
 |width|Number|No|多边形宽|
 |height|Number|No|多边形高|
 |strokeWidth|Number|No|边框宽度|
@@ -116,7 +116,7 @@ const option = {
 
 
 |Props|Type|Required|Description|
-|:-:|:-:|:-:|:-:|
+| :- | :- | :- | :- |
 |strokeWidth|Number|No|边框宽度|
 |stroke|Color|No|边框颜色|
 |fill|Color|No|填充色|
@@ -144,7 +144,7 @@ const ellipse_option = {
 
 
 |Props|Type|Required|Description|
-|:-:|:-:|:-:|:-:|
+| :- | :- | :- | :- |
 |r|Number|No|雷达图半径|
 |splitNumber|Number|No|雷达图轴线数量|
 |shape|String|No|雷达图形状[polygon/circle],默认polygon|
@@ -232,7 +232,7 @@ const option = {
 
 
 |Props|Type|Required|Description|
-|:-:|:-:|:-:|:-:|
+| :- | :- | :- | :- |
 |color|Array|No|饼图颜色|
 |series|Array|No|饼图数据|
 - demo
@@ -259,7 +259,7 @@ const option2 = {
 
 
 |Props|Type|Required|Description|
-|:-:|:-:|:-:|:-:|
+| :- | :- | :- | :- |
 |xAxis|Object|No|x轴信息|
 |yAxis|Object|No|y轴信息|
 |series|Array|No|折线图数据|
@@ -352,7 +352,7 @@ const option = {
 
 
 |Props|Type|Required|Description|
-|:-:|:-:|:-:|:-:|
+| :- | :- | :- | :- |
 |xAxis|Object|No|x轴信息|
 |yAxis|Object|No|y轴信息|
 |series|Array|No|柱状图数据|
@@ -422,7 +422,7 @@ const option = {
 
 
 |Props|Type|Required|Description|
-|:-:|:-:|:-:|:-:|
+| :- | :- | :- | :- |
 |xAxis|Object|No|x轴信息|
 |yAxis|Object|No|y轴信息|
 |series|Array|No|散点图数据|
@@ -494,7 +494,7 @@ const option = {
 
 
 |Props|Type|Required|Description|
-|:-:|:-:|:-:|:-:|
+| :- | :- | :- | :- |
 |color|Array|No|漏斗图颜色数组|
 |series|Array|No|漏斗图数据|
 - demo
