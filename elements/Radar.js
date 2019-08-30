@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {View, ART, Dimensions, ScrollView, Text} from 'react-native';
 const {width, height} = Dimensions.get('window');
 const {Surface, Shape} = ART;
-let indicatorCArr = [];
+let indicatorCList = [];
 import {color} from '../theme/theme';
 const defaultSeriesLineStyle = {
 	color: color[0],
@@ -56,7 +56,7 @@ const defaultOption = {
 export default class Radar extends Component{
 	constructor(props) {
 		super(props);
-		indicatorCArr = [];
+		indicatorCList = [];
 		this.option = Object.assign(defaultOption, props.option || {});
 		this.splitNumber = this.option.splitNumber || 5;//雷达图有几个圆圈
 		this.indicator = this.option.indicator || [];//逆时针排列
@@ -73,7 +73,7 @@ export default class Radar extends Component{
 		this._getShape();
 		this._getPath();
 		this.state = {
-			radarIndicatorList: indicatorCArr
+			radarIndicatorList: indicatorCList
 		};
 	}
 	componentDidMount() {
@@ -105,7 +105,7 @@ export default class Radar extends Component{
 						this.radarAxisPathArr.push(p);
 					}
 					c.text = indicator[j] && indicator[j].text || '';
-					indicatorCArr.push(c);
+					indicatorCList.push(c);
 				}
 				if(splitLine && splitLine.show) {
 					if(0 === j) {
