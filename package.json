@@ -1,6 +1,6 @@
 {
   "name": "react-native-tcharts",
-  "version": "1.7.2",
+  "version": "1.7.3",
   "description": "基于ART的react native图表组件库",
   "main": "index.js",
   "scripts": {
