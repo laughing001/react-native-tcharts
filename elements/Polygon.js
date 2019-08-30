@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {View, ART, Dimensions} from 'react-native';
 const {width} = Dimensions.get('window');
 const {Surface, Shape} = ART;
-import {color} from '../theme/e_default';
+import {color} from '../theme/theme';
 const defaultOption = {
 	lineNumber: 5,
 	startAngle: 0,

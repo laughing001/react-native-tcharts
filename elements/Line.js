@@ -8,9 +8,9 @@ import {
     Dimensions
 } from 'react-native'
 
-const { Surface, Shape, Path, RadialGradient } = ART;
+const { Surface, Shape, Path} = ART;
 const {width} = Dimensions.get('window');
-import {color} from '../theme/e_default';
+import {color} from '../theme/theme';
 const defaultOption = {
     xAxis: {
         name: 'test',
@@ -114,14 +114,6 @@ export default class Line extends Component {
         this.pointX = []
         this.lineH = []
         this.chartOffsetX = (width - this.width) / 2
-
-        // this.data = {
-        //     interval: 200,
-        //     maxY: 7900,
-        //     minY: 6900,
-        //     yAxis: [7099, 6973, 6953, 6914, 7155, 7300, 6988, 7100, 7200, 7899],
-        //     xAxis: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-        // }
         this.data = this.props.data
 
         const yAxis_text_list = []

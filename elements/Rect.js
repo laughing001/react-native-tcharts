@@ -5,7 +5,7 @@ import {
 } from 'react-native';
 const {Surface, Shape, Path} = ART;
 const {width, height} = Dimensions.get('window');
-import {color} from '../theme/e_default';
+import {color} from '../theme/theme';
 const defaultOption = {
         strokeWidth: 1,
         stroke: color[1],

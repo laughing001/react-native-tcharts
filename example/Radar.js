@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {ScrollView, View, TouchableOpacity} from 'react-native';
+import {ScrollView, View} from 'react-native';
 import Radar from '../elements/Radar';
 let option = {
 	name: '',
@@ -185,13 +185,9 @@ let option2 = {
 		}
 	}]
 };
-// let option1 = JSON.stringify(option);
-// option1 = JSON.parse(option1);
-// option1.shape = 'polygon';
 export default class RadarDemo extends Component{
 	constructor(props) {
 		super(props);
-		//option.series[0]['data'] = [].concat([20, 30, 50, 10, 88, 95]);
 		let option1 = JSON.stringify(option);
 		option1 = JSON.parse(option1);
 		option1.shape = 'polygon';
@@ -199,15 +195,6 @@ export default class RadarDemo extends Component{
 			option: option,
 			option1: option1
 		};
-	}
-	onPress = () => {
-		// option.series[0]['data'] = [].concat([20, 30, 50, 10, 88, 95]);
-		// let option1 = JSON.stringify(option);
-		// option1 = JSON.parse(option1);
-		option.shape = 'polygon';
-		this.setState({
-			option: option
-		});
 	}
   	render() {
   		let {option, option1} = this.state;

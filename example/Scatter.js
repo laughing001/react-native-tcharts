@@ -1,7 +1,7 @@
 import React, { Component} from "react";
 import { View, StyleSheet, ScrollView, Animated, Text, TouchableOpacity} from "react-native";
 import Scatter from '../elements/Scatter';
-import {color} from '../theme/e_default';
+import {color} from '../theme/theme';
 const option = {
     xAxis: {
         lineStyle: {

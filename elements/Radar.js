@@ -3,7 +3,7 @@ import {View, ART, Dimensions, ScrollView, Text} from 'react-native';
 const {width, height} = Dimensions.get('window');
 const {Surface, Shape} = ART;
 let indicatorCArr = [];
-import {color} from '../theme/e_default';
+import {color} from '../theme/theme';
 const defaultSeriesLineStyle = {
 	color: color[0],
 	opacity: 1
@@ -73,7 +73,7 @@ export default class Radar extends Component{
 		this._getShape();
 		this._getPath();
 		this.state = {
-			radarIndicatorArr: indicatorCArr
+			radarIndicatorList: indicatorCArr
 		};
 	}
 	componentDidMount() {
@@ -90,7 +90,6 @@ export default class Radar extends Component{
 		this.radarTextArr = [];
 		for(let i = 1; i <= splitNumber; i++) {//圆圈个数的循环
 			let r = this.radarR * i;
-			let pointCoordinate = [];
 			let path = ART.Path();
 			let start = {};
 			for(let j = 0, len = indicator.length; j < len; j++) {//轴线的循环
@@ -135,7 +134,7 @@ export default class Radar extends Component{
 		}
 	}
 	_getPath = () => {
-		this.radarPathArr = [];
+		this.radarPathList = [];
 		const {startAngle, splitNumber} = this.option;
 		this.option && this.option.series && this.option.series.map((item, index) => {
 			let p = ART.Path();
@@ -151,7 +150,7 @@ export default class Radar extends Component{
 				}
 			});
 			p.close();
-			this.radarPathArr.push({
+			this.radarPathList.push({
 				path: p,
 				lineStyle: item.lineStyle || defaultSeriesLineStyle,
 				areaStyle: item.areaStyle || defaultSeriesAreaStyle
@@ -207,6 +206,7 @@ export default class Radar extends Component{
 		if(c && c.hasLayout) {
 			return;
 		}
+		const {radarIndicatorList} = this.state;
 		let layout = (e && e.nativeEvent && e.nativeEvent.layout) || {};
 		c.hasLayout = true;
 		c.opacity = 1;
@@ -234,28 +234,29 @@ export default class Radar extends Component{
 			c.y = c.y - h;
 		}
 		this.setState({
-			radarIndicatorArr: [].concat(this.state.radarIndicatorArr)
+			radarIndicatorList: [].concat(radarIndicatorList)
 		});
 	}
 	_formatText = text => {
 		let {rich} = this.option || {};
 		text = text || '';
 		text = text.replace('{', '').replace('}', '');
-		let textArr = text.split(':');
-		if(1 == textArr.length) {
+		let textList = text.split(':');
+		if(1 == textList.length) {
 			return {
 				style: rich['default'] || null,
-				text: textArr[0]
+				text: textList[0]
 			};
 		} else {
 			return {
-				style: rich[textArr[0]] || rich['default'] || null,
-				text: textArr[1]
+				style: rich[textList[0]] || rich['default'] || null,
+				text: textList[1]
 			};
 		}
 	}
 	render() {
 		const {axisLine, splitLine, splitArea, rich, shape} = this.option;
+		const {radarIndicatorList} = this.state;
 		return (<View style={{
 			width: this.radarWidth,
 			height: this.radarHeight}}>
@@ -286,7 +287,7 @@ export default class Radar extends Component{
 					})
 				}
 				{
-					this.radarPathArr.map((item, index) => {
+					this.radarPathList.map((item, index) => {
 						return <Shape
 							opacity={item.areaStyle.opacity || 1}
 							fill={item.areaStyle.color}
@@ -298,9 +299,9 @@ export default class Radar extends Component{
 				}
 			</Surface>
 			{
-				this.state.radarIndicatorArr.map((c, index) => {
+				radarIndicatorList.map((c, index) => {
 					if(c && c.text) {
-						let textArr = c.text.split('\n');//可能是多行,以\n换行
+						let textList = c.text.split('\n');//可能是多行,以\n换行
 						return (<View
 							key={index}
 							onLayout={e => {//text尺寸需要动态获取
@@ -314,7 +315,7 @@ export default class Radar extends Component{
 								left: c.x,
 								top: c.y}}>
 								{
-									textArr.map((lineText, i) => {
+									textList.map((lineText, i) => {
 										let lineTextArr = lineText.split('}{');//一行可能有多个text,每个text用{}{}包裹
 										return (<View key={i} style={{
 											flexDirection: 'row',

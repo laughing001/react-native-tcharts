@@ -1,7 +1,7 @@
 import React, { Component, PureComponent } from "react";
 import { View, StyleSheet, ScrollView, Animated, Text, TouchableOpacity} from "react-native";
 import Pie from '../elements/Pie';
-import {color} from '../theme/e_default';
+import {color} from '../theme/theme';
 export default class PieDemo extends Component{
     constructor(props){
         super(props)

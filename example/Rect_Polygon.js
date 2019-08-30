@@ -2,7 +2,7 @@ import React, { Component} from "react";
 import { View, StyleSheet, ScrollView, Animated, Text, TouchableOpacity} from "react-native";
 import Rect from '../elements/Rect';
 import Polygon from '../elements/Polygon';
-import {color} from '../theme/e_default';
+import {color} from '../theme/theme';
 const option = {
     strokeWidth: 0,
     stroke: color[3],

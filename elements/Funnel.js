@@ -8,7 +8,7 @@ import {
 const {width, height} = Dimensions.get('window');
 
 const {Surface, Shape, Path, Group} = ART;
-import {color} from '../theme/e_default';
+import {color} from '../theme/theme';
 
 const defaultOption = {
     title: '漏斗图',
@@ -168,13 +168,14 @@ export default class Funnel extends Component{
     }
 
     render(){
-        const { width, height, option, multiPath, color} = this.state;
-        return(<View  style={{width: width, height: height}}>
-            <Surface width={width} height={height}
-                style={{}}
-            >
+        const { width, height, multiPath, color} = this.state;
+        return(<View  style={{
+            width: width,
+            height: height
+        }}>
+            <Surface width={width} height={height}>
                 {
-                    this.state.multiPath.map((item, key)=>{
+                    multiPath.map((item, key)=>{
                         return ((item && item.path) || []).map((val, index)=>{
                             return (<Shape
                                 d={val}  

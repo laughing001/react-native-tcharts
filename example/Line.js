@@ -1,6 +1,6 @@
 import React, { Component} from "react";
 import { View, StyleSheet, ScrollView, Animated, Text, TouchableOpacity} from "react-native";
-import {color} from '../theme/e_default';
+import {color} from '../theme/theme';
 import Line from '../elements/Line';
 const option = {
     xAxis: {

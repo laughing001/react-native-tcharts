@@ -1,13 +1,12 @@
 import React, {Component} from 'react'
 import {
     View,
-    Text,
     StyleSheet,
     ART
 } from 'react-native';
 
-const {Surface, Shape, Path, Group, Transform} = ART;
-import {color} from '../theme/e_default';
+const {Surface, Shape, Path, Transform} = ART;
+import {color} from '../theme/theme';
 const defaultOption =  {
     title: {},
     legend: {},

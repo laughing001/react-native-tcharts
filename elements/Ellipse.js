@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {View, ART, Dimensions} from 'react-native';
 const {width, height} = Dimensions.get('window');
 const {Surface, Shape, Path} = ART;
-import {color} from '../theme/e_default';
+import {color} from '../theme/theme';
 const defaultOption = {
     rx: 80,
     ry: 40,

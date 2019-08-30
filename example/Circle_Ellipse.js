@@ -2,7 +2,7 @@ import React, { Component} from "react";
 import { View, StyleSheet, ScrollView, Animated, Text, TouchableOpacity} from "react-native";
 import Circle from '../elements/Circle';
 import Ellipse from '../elements/Ellipse';
-import {color} from '../theme/e_default';
+import {color} from '../theme/theme';
 let option = {
     r: 80,
     fill: color[3],

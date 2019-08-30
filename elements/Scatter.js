@@ -8,7 +8,7 @@ import {
 
 const { Surface, Shape, Path} = ART;
 const {width, height} = Dimensions.get('window');
-import {color} from '../theme/e_default';
+import {color} from '../theme/theme';
 const defaultOption = {
     xAxis: {
         lineStyle: {
