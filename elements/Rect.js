@@ -1,7 +1,8 @@
 import React, {Component} from 'react'
 import {
     View,
-    ART
+    ART,
+    Dimensions
 } from 'react-native';
 const {Surface, Shape, Path} = ART;
 const {width, height} = Dimensions.get('window');
