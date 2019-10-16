@@ -9,8 +9,8 @@ const defaultSeriesLineStyle = {
 	opacity: 1
 };
 const defaultSeriesAreaStyle = {
-	color: color[1],
-	opacity: 1
+	color: color[6],
+	opacity: 0.8
 };
 const defaultOption = {
 	r: 80,
@@ -34,6 +34,12 @@ const defaultOption = {
 		max: 100,
 		color: color[2]
 	}],
+	splitLine: {
+		show: true,
+		lineStyle: {
+			color: color[5]
+		}
+	},
 	axisLine: {
 		show: true,
 		lineStyle: {
