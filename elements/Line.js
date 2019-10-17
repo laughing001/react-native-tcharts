@@ -100,8 +100,8 @@ export default class Line extends Component {
         const xAxis = this.option.xAxis,
             yAxis = this.option.yAxis;
         this.bottom = 30;
-        this.left = 50;
-        this.right = 20;
+        this.left = 10;
+        this.right = 10;
         this.top = 30;
 
         this.width = props.width || width;
@@ -115,8 +115,7 @@ export default class Line extends Component {
         this.lineH = []
         this.chartOffsetX = (width - this.width) / 2
         this.data = this.props.data
-
-        const yAxis_text_list = []
+        const yAxis_text_list = [];
 
         let min_y = yAxis.min,
             max_y = yAxis.max,
@@ -136,12 +135,13 @@ export default class Line extends Component {
 
         this.itemWidth = (this.width - this.left - this.right) / xAxis.data.length;
         this.itemHeight = (this.height - this.top - this.bottom) / lineHCount;
+        //绘制刻度
         for (let index = 0; index < xAxis.data.length; index++) {
             const x = this.left + (index + 1) * this.itemWidth
             const y = this.height - this.bottom
             this.pointX.push(new Path().moveTo(x, y).lineTo(x, y + 5))
         }
-
+        //绘制纵坐标线条
         for (let index = 0; index < lineHCount; index++) {
             const x = this.left
             const y = this.top + index * this.itemHeight
@@ -150,11 +150,15 @@ export default class Line extends Component {
 
         const firstData = series_item.data[0]
         const startX = this.left + this.itemWidth / 2
-        this.trendline = new Path().moveTo(startX, this.caculateY(firstData))
+        this.trendline = new Path().moveTo(startX, this.caculateY(firstData)) //趋势图地点
         this.rectLine = new Path().moveTo(startX, this.caculateY(firstData))
         this.tipsPoint.push({ x: startX, y: this.caculateY(firstData) })
     
-        this.anchorPoints.push(new Path().moveTo(startX, this.caculateY(firstData) - this.pointer_radius).arc(0, this.pointer_radius * 2, 1).arc(0, -this.pointer_radius * 2, 1).close())
+        this.anchorPoints.push(
+            new Path()
+            .moveTo(startX, this.caculateY(firstData) - this.pointer_radius)
+            .arc(0, this.pointer_radius * 2, 1)
+            .arc(0, -this.pointer_radius * 2, 1).close())
 
         if (series_item.data.length > 1) {
             // 超过两条数据，填充封闭区域
@@ -254,13 +258,15 @@ export default class Line extends Component {
                             alignItems: 'center',
                             position: 'absolute',
                             top: this.height - this.bottom,
-                            left: this.chartOffsetX + this.left + index * this.itemWidth,
-                            width: this.itemWidth,
+                            left: this.left + index * (this.itemWidth -1),
+                            width: this.itemWidth - 1,
                             height: 20
                     }}>
                         <Text style={{
                             color: xAxis.textStyle.color,
-                            fontSize: xAxis.textStyle.fontSize
+                            fontSize: xAxis.textStyle.fontSize,
+                            width: '100%',
+                            textAlign: 'center'
                         }}>{item}</Text>
                         </View>)
                 })
@@ -283,22 +289,27 @@ export default class Line extends Component {
             }
 
             {
-                yAxis.data.map((item, index) => {
-                    return (<View key={index} style={{
-                        flexDirection: "row",
-                        justifyContent: 'flex-end',
-                        alignItems: 'center',
-                        position: 'absolute',
-                        top: this.height - this.bottom - 10 - this.itemHeight * index,
-                        left: this.chartOffsetX + 5,
-                        width: this.left - 10, height: 20
-                    }}>
-                        <Text style={{
-                            color: yAxis.textStyle.color,
-                            fontSize: yAxis.textStyle.fontSize
-                        }}>{item}</Text>
-                    </View>)
-                })
+                yAxis.show ? 
+                (<View>
+                    {
+                        yAxis.data.map((item, index) => {
+                            return (<View key={index} style={{
+                                flexDirection: "row",
+                                justifyContent: 'flex-end',
+                                alignItems: 'center',
+                                position: 'absolute',
+                                top: this.height - this.bottom - 10 - this.itemHeight * index,
+                                left: this.chartOffsetX + 5,
+                                width: this.left - 10, height: 20
+                            }}>
+                                <Text style={{
+                                    color: yAxis.textStyle.color,
+                                    fontSize: yAxis.textStyle.fontSize
+                                }}>{item}</Text>
+                            </View>)
+                        })
+                    }
+                </View>) : null  
             }
 
             <TouchableOpacity
@@ -314,7 +325,7 @@ export default class Line extends Component {
             </TouchableOpacity>
             {
                 showTips ? (<View style={[styles.button, {
-                    left: this.chartOffsetX + tipsLeft,
+                    left: tipsLeft,
                     bottom: this.height - tipsBottom
                     }]}
                 >
