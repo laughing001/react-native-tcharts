@@ -2,14 +2,21 @@ import React, {Component} from 'react'
 import {
     View,
     StyleSheet,
+    Text,
     ART
 } from 'react-native';
-
+// import {Surface, Shape, Path, Transform} from '@react-native-community/art'
 const {Surface, Shape, Path, Transform} = ART;
 import {color} from '../theme/theme';
+// import Rect from './Rect';
 const defaultOption =  {
     title: {},
-    legend: {},
+    legend: {
+        orient: 'horizontal' | 'vertical',
+        left: 0,
+        top:0,
+        data: ['示例1', '示例2']
+    },
     color: [color[0], color[1], color[2], color[3], color[4]], //饼图颜色
     series:[{
         name: '',
@@ -23,8 +30,9 @@ export default class Pie extends Component{
         super(props);
         this.defaultColor = color;
         let option = Object.assign(defaultOption, props.option || {});
-        let {color, series} = option;
-        
+        let {color, series, legend} = option;
+        this.legend = legend;
+        console.log('0000', this.legend)
         //对series做处理，支持多个元素，以及data为对象
         let multiPieData = [];
         if(series instanceof Array){
@@ -146,9 +154,9 @@ export default class Pie extends Component{
     }
     render(){
         const {width, height, colorArr, pathArr, multiPieData} = this.state;
-        
+        const {left, right, data, orient} = this.legend
         return(
-            <View  style={{width: width, height: height}}>
+            <View  style={{width: width, height: height, backgroundColor: 'red'}}>
                 <Surface width={width} height={height}>
                     {
                         this.state.pathArr.map((item, key)=>{
@@ -200,17 +208,53 @@ export default class Pie extends Component{
                     //     ) : null
                     // })
                 }
-            </View>
-            )
-        }
+                
+                {
+                    orient && orient == 'horizontal' ? (
+                        <View style={{osition: 'absolute', left, right, zIndex: 1000, display: 'flex', flexDirection: 'row'}}>
+                            {
+                                (data || []).map((item, idex)=>{
+                                    return (
+                                        <Text  
+                                            style={[styles.font12, {color: colorArr[idex], marginRight: 10}]}
+                                            key={`data-pie-${idex}`}
+                                        >
+                                            {item}
+                                        </Text>
+                                    )
+                                })
+                            }
+                        </View>
+                    ) : (
+                        <View style={{osition: 'absolute', left, right, zIndex: 1000}}>
+                            {
+                                (data || []).map((item, idex)=>{
+                                    return (
+                                            <Text  
+                                                key={`data-pie-${idex}`}
+                                                style={[styles.font12, {color: colorArr[idex], marginRight: 10}]}>
+                                                {item}
+                                            </Text>
+                                    )
+                                })
+                            }
+                        </View>
+                    )
+                }
+                    
+                    
+               </View> 
+        )
+     }
+        
     }
 
     const styles = StyleSheet.create({
         font12: {
             fontSize: 12,
             color: '#000',
-            position: 'absolute',
-            width: 30,
+            // position: 'absolute',
+            // width: 30,
         }
     })
             

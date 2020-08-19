@@ -9,7 +9,12 @@ export default class PieDemo extends Component{
     render(){
        let option = {
             title: {},
-            legend: {},
+            legend: {
+                orient: 'horizontal',
+                left: 0,
+                top:0,
+                data: ['示例1', '示例2']
+            },
             color: [color[6], color[7]], //饼图颜色
             series:[{
                 name: '',
@@ -61,7 +66,7 @@ export default class PieDemo extends Component{
                         height={160}
                         width={200}
                     />
-                    <Pie
+                    {/* <Pie
                         option={option1}
                         height={160}
                         width={200}
@@ -70,7 +75,7 @@ export default class PieDemo extends Component{
                         option={option2}
                         height={160}
                         width={200}
-                    />
+                    /> */}
                 </ScrollView>
             </View>
         )
